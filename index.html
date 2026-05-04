@@ -115,6 +115,19 @@
   .next-steps{margin-top:1.5rem;padding:1rem 1.25rem;background:var(--blue-light);border-left:4px solid var(--blue);border-radius:6px;font-size:.85rem;color:var(--text);line-height:1.5}
   .next-steps strong{color:var(--blue-dark)}
 
+  .trust{background:var(--white);padding:4rem 1.5rem}
+  .trust-inner{max-width:980px;margin:0 auto}
+  .trust h2{font-size:1.7rem;color:var(--blue-dark);text-align:center;margin-bottom:.4rem}
+  .trust .sub{color:var(--muted);text-align:center;margin-bottom:2.5rem}
+  .trust-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:3rem}
+  .trust-stat{background:var(--blue-light);border-radius:var(--radius);padding:1.75rem 1rem;text-align:center;border-top:4px solid var(--accent)}
+  .trust-stat-num{font-size:2.4rem;font-weight:800;color:var(--blue-dark);line-height:1;margin-bottom:.5rem}
+  .trust-stat-label{color:var(--muted);font-size:.9rem;line-height:1.4}
+  .trust-method{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+  .method-item{padding:1.25rem;text-align:left;border-left:3px solid var(--accent);background:var(--gray);border-radius:6px}
+  .method-item h3{color:var(--blue-dark);font-size:1.05rem;margin-bottom:.4rem}
+  .method-item p{color:var(--muted);font-size:.9rem;line-height:1.55}
+
   footer{background:var(--blue-dark);color:rgba(255,255,255,.7);text-align:center;padding:1.5rem;font-size:.85rem}
   footer span{color:var(--accent);font-weight:700}
 
@@ -122,6 +135,7 @@
     .hero h1{font-size:1.8rem}
     .row,.row.three{grid-template-columns:1fr}
     .card{padding:1.5rem 1rem}
+    .trust-stats,.trust-method{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -193,6 +207,43 @@
       <div class="success-icon">✅</div>
       <h2>Request Received!</h2>
       <p>Thank you! We've received your quote request and will be in touch shortly with the best internet service options available for your business.</p>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="trust-inner">
+    <h2>Why Use Us</h2>
+    <p class="sub">Built for business — quotes that include the details that matter.</p>
+
+    <div class="trust-stats">
+      <div class="trust-stat">
+        <div class="trust-stat-num">30+</div>
+        <div class="trust-stat-label">Business ISPs searched per quote</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat-num">24h</div>
+        <div class="trust-stat-label">Typical quote turnaround</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat-num">$0</div>
+        <div class="trust-stat-label">Cost to your business — ever</div>
+      </div>
+    </div>
+
+    <div class="trust-method">
+      <div class="method-item">
+        <h3>Address-Specific</h3>
+        <p>We check every business-grade ISP available at your exact service address. No "national average" — just what you can actually order.</p>
+      </div>
+      <div class="method-item">
+        <h3>Built for Business</h3>
+        <p>Business-grade service — SLAs, static IPs, dedicated lines, uptime commitments. Not residential service repackaged for offices.</p>
+      </div>
+      <div class="method-item">
+        <h3>Full Quotes, No Surprises</h3>
+        <p>Each quote includes monthly cost, install timeline, hardware fees, and contract length. You decide with full information.</p>
+      </div>
     </div>
   </div>
 </section>
