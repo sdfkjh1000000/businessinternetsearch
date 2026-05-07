@@ -43,8 +43,7 @@
 }
 </script>
 
-<!-- Cloudflare Turnstile -->
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script src="/consent.js" defer></script>
 
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
@@ -130,12 +129,30 @@
 
   footer{background:var(--blue-dark);color:rgba(255,255,255,.7);text-align:center;padding:1.5rem;font-size:.85rem}
   footer span{color:var(--accent);font-weight:700}
+  footer a{color:rgba(255,255,255,.85);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+
+  .consent-banner{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--white);border-top:2px solid var(--blue);box-shadow:0 -4px 24px rgba(0,0,0,.12);padding:1.25rem 1.5rem;animation:consent-in .25s ease}
+  @keyframes consent-in{from{transform:translateY(100%)}to{transform:translateY(0)}}
+  .consent-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:1.25rem}
+  .consent-text{font-size:.88rem;color:var(--text);line-height:1.5;flex:1}
+  .consent-text a{color:var(--blue);text-decoration:underline}
+  .consent-actions{display:flex;gap:.6rem;flex-shrink:0}
+  .consent-btn{border:none;border-radius:6px;padding:.55rem 1.1rem;font-size:.85rem;font-weight:600;cursor:pointer;transition:background .15s}
+  .consent-decline{background:#e5e7eb;color:var(--text)}
+  .consent-decline:hover{background:#d1d5db}
+  .consent-accept{background:var(--blue);color:var(--white)}
+  .consent-accept:hover{background:var(--blue-dark)}
+  .consent-form-notice{color:#dc2626;font-size:.85rem;margin-top:.75rem;line-height:1.5}
+  .consent-form-notice a{color:var(--blue)}
 
   @media(max-width:600px){
     .hero h1{font-size:1.8rem}
     .row,.row.three{grid-template-columns:1fr}
     .card{padding:1.5rem 1rem}
     .trust-stats,.trust-method{grid-template-columns:1fr}
+    .consent-inner{flex-direction:column;align-items:stretch;text-align:center}
+    .consent-actions{justify-content:center}
   }
 </style>
 </head>
@@ -194,6 +211,11 @@
         <strong>What happens next:</strong> We only need the basics to find you a quote. Once you accept a quote, we'll collect the legal and billing details to open the account with your chosen provider — no surprise paperwork upfront.
       </div>
 
+      <div style="position:absolute;left:-9999px;" aria-hidden="true">
+        <label for="cf-website">Website</label>
+        <input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
       <!-- Cloudflare Turnstile widget -->
       <div class="turnstile-wrap">
         <div class="cf-turnstile" data-sitekey="0x4AAAAAADC0fUljSXLUA7ev" data-theme="light"></div>
@@ -249,7 +271,7 @@
 </section>
 
 <footer>
-  <p>&copy; 2026 <span>Business Internet Quotes — Quick and Easy</span> &nbsp;|&nbsp; businessinternetsearch.sdfkjh.com</p>
+  <p>&copy; 2026 <span>Business Internet Quotes — Quick and Easy</span> &nbsp;|&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;|&nbsp; <a href="/do-not-sell.html">Do Not Sell</a></p>
 </footer>
 
 <script>
@@ -288,6 +310,7 @@
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({
           turnstileToken,
+          website: document.getElementById('cf-website').value,
           data: {
             bizName:     document.getElementById('bizName').value.trim(),
             serviceAddr: document.getElementById('serviceAddr').value.trim(),
