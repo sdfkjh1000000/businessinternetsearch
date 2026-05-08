@@ -36,6 +36,7 @@
   "@type": "ProfessionalService",
   "name": "Business Internet Quotes – Quick and Easy",
   "url": "https://businessinternetsearch.sdfkjh.com",
+  "image": "https://businessinternetsearch.sdfkjh.com/og-image.png",
   "description": "We provide free business internet service quotes and connect companies with the best ISP options available at their location.",
   "serviceType": ["Business Internet Quotes","ISP Comparison","Business Broadband Quotes","Dedicated Internet Access Quotes"],
   "areaServed": {"@type":"Country","name":"United States"},
@@ -49,7 +50,7 @@
   *{box-sizing:border-box;margin:0;padding:0}
   :root{
     --blue:#1a4fa0;--blue-dark:#0f3070;--blue-light:#e8f0fc;
-    --accent:#f0a500;--gray:#f5f7fa;--text:#222;--muted:#666;
+    --accent:#f0a500;--gray:#f5f7fa;--text:#222;--muted:#555;
     --white:#fff;--radius:10px;--shadow:0 4px 24px rgba(0,0,0,.10);
   }
   body{font-family:'Segoe UI',Arial,sans-serif;color:var(--text);background:var(--gray)}
@@ -63,7 +64,7 @@
   .hero{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue) 100%);color:var(--white);text-align:center;padding:5rem 1.5rem 4rem}
   .hero h1{font-size:2.6rem;font-weight:800;line-height:1.2;margin-bottom:1rem}
   .hero h1 span{color:var(--accent)}
-  .hero p{font-size:1.15rem;max-width:560px;margin:0 auto 2rem;opacity:.9}
+  .hero p{font-size:1.15rem;max-width:560px;margin:0 auto 2rem}
   .hero-btn{background:var(--accent);color:var(--blue-dark);border:none;padding:.85rem 2.2rem;border-radius:8px;font-size:1.05rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s}
   .hero-btn:hover{background:#e09500}
 
@@ -86,7 +87,7 @@
   .row.full{grid-template-columns:1fr}
   .row.three{grid-template-columns:1fr 1fr 1fr}
   .field{display:flex;flex-direction:column;gap:.3rem}
-  label{font-size:.85rem;font-weight:600;color:var(--text)}
+  label,.static-q-label{font-size:.85rem;font-weight:600;color:var(--text)}
   input,select{border:1.5px solid #d0d7e3;border-radius:6px;padding:.55rem .75rem;font-size:.95rem;color:var(--text);background:var(--white);transition:border .2s;width:100%}
   input:focus,select:focus{outline:none;border-color:var(--blue)}
   .pin-note{font-size:.75rem;color:var(--muted);margin-top:.2rem}
@@ -127,10 +128,10 @@
   .method-item h3{color:var(--blue-dark);font-size:1.05rem;margin-bottom:.4rem}
   .method-item p{color:var(--muted);font-size:.9rem;line-height:1.55}
 
-  footer{background:var(--blue-dark);color:rgba(255,255,255,.7);text-align:center;padding:1.5rem;font-size:.85rem}
+  footer{background:var(--blue-dark);color:rgba(255,255,255,.92);text-align:center;padding:1.5rem;font-size:.85rem}
   footer span{color:var(--accent);font-weight:700}
-  footer a{color:rgba(255,255,255,.85);text-decoration:none}
-  footer a:hover{text-decoration:underline}
+  footer a{color:#ffd87a;text-decoration:underline}
+  footer a:hover{color:var(--accent)}
 
   .consent-banner{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--white);border-top:2px solid var(--blue);box-shadow:0 -4px 24px rgba(0,0,0,.12);padding:1.25rem 1.5rem;animation:consent-in .25s ease}
   @keyframes consent-in{from{transform:translateY(100%)}to{transform:translateY(0)}}
@@ -186,22 +187,22 @@
     <div id="the-form">
 
       <div class="section-label">Business Information</div>
-      <div class="row full"><div class="field"><label>Customer Legal Business Name</label><input type="text" id="bizName" placeholder="Acme Corporation LLC"/></div></div>
-      <div class="row full"><div class="field"><label>Service Address</label><input type="text" id="serviceAddr" placeholder="123 Main St, City, State, ZIP"/></div></div>
+      <div class="row full"><div class="field"><label for="bizName">Customer Legal Business Name</label><input type="text" id="bizName" placeholder="Acme Corporation LLC"/></div></div>
+      <div class="row full"><div class="field"><label for="serviceAddr">Service Address</label><input type="text" id="serviceAddr" placeholder="123 Main St, City, State, ZIP"/></div></div>
 
       <div class="section-label">Primary Contact</div>
       <div class="row three">
-        <div class="field"><label>Full Name</label><input type="text" id="primName" placeholder="Jane Smith"/></div>
-        <div class="field"><label>Phone</label><input type="tel" id="primPhone" placeholder="(555) 000-0000"/></div>
-        <div class="field"><label>Email</label><input type="email" id="primEmail" placeholder="jane@acme.com"/></div>
+        <div class="field"><label for="primName">Full Name</label><input type="text" id="primName" placeholder="Jane Smith"/></div>
+        <div class="field"><label for="primPhone">Phone</label><input type="tel" id="primPhone" placeholder="(555) 000-0000"/></div>
+        <div class="field"><label for="primEmail">Email</label><input type="email" id="primEmail" placeholder="jane@acme.com"/></div>
       </div>
 
       <div class="section-label">Service Requirements</div>
       <div class="row">
         <div class="field">
-          <label>Static IPs Needed?</label>
+          <span class="static-q-label">Static IPs Needed?</span>
           <div class="toggle-row">
-            <label class="toggle"><input type="checkbox" id="staticIP"/><span class="slider"></span></label>
+            <label class="toggle" for="staticIP"><input type="checkbox" id="staticIP" aria-label="Static IPs needed"/><span class="slider"></span></label>
             <span class="static-label" id="staticLabel">No</span>
           </div>
         </div>
