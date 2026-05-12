@@ -58,6 +58,9 @@
   nav{background:var(--blue-dark);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:99;box-shadow:0 2px 8px rgba(0,0,0,.2)}
   .logo{color:var(--white);font-size:1.15rem;font-weight:700;letter-spacing:.5px;line-height:1.2}
   .logo span{color:var(--accent)}
+  .nav-right{display:flex;align-items:center;gap:1.25rem}
+  .nav-link{color:rgba(255,255,255,.92);font-size:.95rem;font-weight:600;text-decoration:none;transition:color .15s}
+  .nav-link:hover{color:var(--accent)}
   .nav-cta{background:var(--accent);color:var(--blue-dark);border:none;padding:.5rem 1.2rem;border-radius:6px;font-weight:700;cursor:pointer;font-size:.95rem;text-decoration:none}
   .nav-cta:hover{background:#e09500}
 
@@ -128,6 +131,26 @@
   .method-item h3{color:var(--blue-dark);font-size:1.05rem;margin-bottom:.4rem}
   .method-item p{color:var(--muted);font-size:.9rem;line-height:1.55}
 
+  .faq-section{background:var(--gray);padding:4rem 1.5rem}
+  .faq-inner{max-width:780px;margin:0 auto}
+  .faq-section h2{font-size:1.7rem;color:var(--blue-dark);text-align:center;margin-bottom:.4rem}
+  .faq-section .sub{color:var(--muted);text-align:center;margin-bottom:2.25rem}
+  details.q{background:var(--white);border-radius:var(--radius);box-shadow:0 2px 12px rgba(0,0,0,.05);margin-bottom:.85rem;overflow:hidden;transition:box-shadow .2s}
+  details.q[open]{box-shadow:0 4px 20px rgba(0,0,0,.08)}
+  details.q summary{padding:1.1rem 1.4rem;font-size:1.02rem;font-weight:600;color:var(--blue-dark);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;line-height:1.4}
+  details.q summary::-webkit-details-marker{display:none}
+  details.q summary::after{content:"+";font-size:1.5rem;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s;line-height:1}
+  details.q[open] summary::after{content:"−"}
+  details.q summary:hover{background:#fafbfd}
+  details.q .a{padding:0 1.4rem 1.25rem;color:var(--text);font-size:.96rem;line-height:1.65}
+  details.q .a p{margin-bottom:.75rem}
+  details.q .a p:last-child{margin-bottom:0}
+  details.q .a ul{margin:.5rem 0 .75rem 1.25rem}
+  details.q .a li{margin-bottom:.35rem}
+  .faq-more{text-align:center;margin-top:2rem}
+  .faq-more a{color:var(--blue);text-decoration:none;font-weight:700;font-size:1rem;border-bottom:2px solid var(--blue-light);padding-bottom:2px;transition:border-color .15s}
+  .faq-more a:hover{border-color:var(--blue)}
+
   footer{background:var(--blue-dark);color:rgba(255,255,255,.92);text-align:center;padding:1.5rem;font-size:.85rem}
   footer span{color:var(--accent);font-weight:700}
   footer a{color:#ffd87a;text-decoration:underline}
@@ -161,7 +184,10 @@
 
 <nav>
   <div class="logo">Business Internet Quotes<br><span>Quick and Easy</span></div>
-  <a class="nav-cta" href="#quote-form">Get a Quote</a>
+  <div class="nav-right">
+    <a class="nav-link" href="/faq.html">FAQ</a>
+    <a class="nav-cta" href="#quote-form">Get a Quote</a>
+  </div>
 </nav>
 
 <main>
@@ -273,10 +299,58 @@
   </div>
 </section>
 
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <h2>Common Questions</h2>
+    <p class="sub">The things businesses ask most when shopping for internet service.</p>
+
+    <details class="q">
+      <summary>Why does every provider tell me "no service available" at my business address?</summary>
+      <div class="a">
+        <p>ISP coverage lookups are built from population data and assume residential coverage. Business connections — especially fiber and Ethernet — are often deployed building-by-building, not address-by-address. Your building might literally have fiber in the riser closet that the public lookup doesn't know about.</p>
+        <p>The only way to know what's actually available is to check directly with each carrier's commercial team for your address.</p>
+      </div>
+    </details>
+
+    <details class="q">
+      <summary>How do I find out which carriers actually serve my building?</summary>
+      <div class="a">
+        <p>You can call each carrier's commercial line individually — typically a dozen calls and a few days of waiting on callbacks. Or submit your address once on this site, and we check every regional and national carrier serving that location in parallel. Either route works; ours is faster.</p>
+      </div>
+    </details>
+
+    <details class="q">
+      <summary>My building shows "no fiber available" — what are my actual options?</summary>
+      <div class="a">
+        <p>Several, depending on the address — build-out requests with carriers, fixed wireless, business cable (DOCSIS), bonded copper, or Starlink Business. We can tell you which of these actually apply at your specific address. <a href="/faq.html#no-fiber">Full breakdown →</a></p>
+      </div>
+    </details>
+
+    <details class="q">
+      <summary>We're moving to a new office — how early should I order internet?</summary>
+      <div class="a">
+        <p>Sooner than you think. Cable installs run 1–3 weeks, lit fiber 2–4 weeks, and a new fiber drop can take 60–120 days. Start checking carrier availability the day you sign the lease, not after.</p>
+      </div>
+    </details>
+
+    <details class="q">
+      <summary>What's the catch? Why is the quote service free?</summary>
+      <div class="a">
+        <p>No catch. When a business chooses internet service through us, the carrier pays us a small ongoing referral commission — it doesn't add anything to your bill, and the price you see is the same price you'd get going direct.</p>
+        <p>If you don't sign service, we don't get paid. We're not a carrier, not a reseller, and we don't sell your information.</p>
+      </div>
+    </details>
+
+    <div class="faq-more">
+      <a href="/faq.html">See all questions →</a>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer>
-  <p>&copy; 2026 <span>Business Internet Quotes — Quick and Easy</span> &nbsp;|&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;|&nbsp; <a href="/do-not-sell.html">Do Not Sell</a> &nbsp;|&nbsp; <a href="/terms.html">Terms</a></p>
+  <p>&copy; 2026 <span>Business Internet Quotes — Quick and Easy</span> &nbsp;|&nbsp; <a href="/faq.html">FAQ</a> &nbsp;|&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;|&nbsp; <a href="/do-not-sell.html">Do Not Sell</a> &nbsp;|&nbsp; <a href="/terms.html">Terms</a></p>
 </footer>
 
 <script>
