@@ -84,6 +84,20 @@
   .step h3{color:var(--blue-dark);margin-bottom:.4rem;font-size:1rem}
   .step p{font-size:.9rem;color:var(--muted)}
 
+  .split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;background:var(--white);min-height:520px}
+  .split-img{position:relative;overflow:hidden;margin:0;display:block}
+  .split-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,transparent 75%,rgba(255,255,255,.18) 100%);pointer-events:none}
+  .split-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+  .split-content{padding:4.5rem 3.5rem;display:flex;flex-direction:column;justify-content:center;max-width:600px}
+  .split-eyebrow{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1.8px;color:var(--accent);margin-bottom:.9rem}
+  .split-content h2{font-size:1.9rem;color:var(--blue-dark);line-height:1.2;margin-bottom:1.1rem;font-weight:800}
+  .split-content > p{color:var(--muted);font-size:1.02rem;line-height:1.7;margin-bottom:1.75rem}
+  .split-features{list-style:none;padding:0;margin:0}
+  .split-features li{padding:.85rem 0 .85rem 1.85rem;position:relative;color:var(--text);font-size:.97rem;line-height:1.55;border-bottom:1px solid #eef2f7}
+  .split-features li:last-child{border-bottom:none}
+  .split-features li::before{content:"";position:absolute;left:.1rem;top:1.25rem;width:.7rem;height:.7rem;background:var(--accent);border-radius:2px;transform:rotate(45deg)}
+  .split-features strong{color:var(--blue-dark);font-weight:700}
+
   .form-section{padding:4rem 1.5rem;max-width:780px;margin:0 auto}
   .form-section h2{font-size:1.7rem;color:var(--blue-dark);margin-bottom:.4rem;text-align:center}
   .form-section .sub{color:var(--muted);text-align:center;margin-bottom:2rem}
@@ -174,6 +188,13 @@
   .consent-form-notice{color:#dc2626;font-size:.85rem;margin-top:.75rem;line-height:1.5}
   .consent-form-notice a{color:var(--blue)}
 
+  @media(max-width:820px){
+    .split{grid-template-columns:1fr;min-height:0}
+    .split-img{min-height:280px;max-height:360px}
+    .split-img::after{background:linear-gradient(180deg,transparent 0%,transparent 75%,rgba(255,255,255,.2) 100%)}
+    .split-content{padding:2.75rem 1.5rem;max-width:none}
+    .split-content h2{font-size:1.55rem}
+  }
   @media(max-width:600px){
     .hero h1{font-size:1.8rem}
     .row,.row.three{grid-template-columns:1fr}
@@ -217,6 +238,25 @@
     <div class="step"><div class="step-num">1</div><h3>Submit Your Info</h3><p>Fill out the quick form below with your business details.</p></div>
     <div class="step"><div class="step-num">2</div><h3>We Do the Search</h3><p>We identify the best providers available at your service address.</p></div>
     <div class="step"><div class="step-num">3</div><h3>You Get Quoted</h3><p>We reach out with tailored options — no cold calls, no runaround.</p></div>
+  </div>
+</section>
+
+<section class="split">
+  <picture class="split-img">
+    <source type="image/avif" srcset="/images/office-working-640.avif 640w, /images/office-working-1024.avif 1024w" sizes="(max-width:820px) 100vw, 50vw"/>
+    <source type="image/webp" srcset="/images/office-working-640.webp 640w, /images/office-working-1024.webp 1024w" sizes="(max-width:820px) 100vw, 50vw"/>
+    <img src="/images/office-working-1024.jpg" srcset="/images/office-working-640.jpg 640w, /images/office-working-1024.jpg 1024w" sizes="(max-width:820px) 100vw, 50vw" alt="Modern open-plan office workspace with city skyline view" loading="lazy"/>
+  </picture>
+  <div class="split-content">
+    <div class="split-eyebrow">Built for working businesses</div>
+    <h2>Quotes that match how you actually work</h2>
+    <p>Business internet isn't a residential plan with a higher price tag. It's a different category — built for offices where downtime stops work and the upload side matters as much as the download.</p>
+    <ul class="split-features">
+      <li><strong>Symmetrical speeds</strong> — uploads keep up with downloads for video calls, cloud apps, and backups.</li>
+      <li><strong>Real SLAs</strong> — uptime guarantees with bill credits when missed, not marketing language.</li>
+      <li><strong>Static IPs</strong> — included where you need them, without the upcharge runaround.</li>
+      <li><strong>Business-trained support</strong> — calls don't sit behind the residential queue.</li>
+    </ul>
   </div>
 </section>
 
