@@ -1,0 +1,19 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://businessinternetsearch.sdfkjh.com/api/faq",
+      "service-desc": [
+        {
+          "href": "https://businessinternetsearch.sdfkjh.com/.well-known/faq-openapi.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://businessinternetsearch.sdfkjh.com/faq",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}

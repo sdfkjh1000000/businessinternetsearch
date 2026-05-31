@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/mcp-server-card/v1.json",
+  "version": "1.0",
+  "protocolVersion": "2025-06-18",
+  "serverInfo": {
+    "name": "businessinternetsearch-mcp",
+    "title": "Business Internet Quotes",
+    "version": "1.0.0"
+  },
+  "description": "Read-only information about Business Internet Quotes, a free service that finds business-grade internet providers serviceable at a commercial address: the service overview and the full FAQ. The quote form is not exposed.",
+  "iconUrl": "https://businessinternetsearch.sdfkjh.com/favicon.svg",
+  "documentationUrl": "https://businessinternetsearch.sdfkjh.com",
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://businessinternetsearch.sdfkjh.com/mcp"
+  },
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "authentication": {
+    "required": false
+  },
+  "tools": "dynamic"
+}

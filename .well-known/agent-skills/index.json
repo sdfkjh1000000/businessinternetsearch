@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "businessinternetsearch",
+      "type": "skill-md",
+      "description": "Answer questions about Business Internet Quotes — a free service that finds business-grade internet providers serviceable at a commercial address: how it works, business internet questions, and the quote process.",
+      "url": "/.well-known/agent-skills/businessinternetsearch/SKILL.md",
+      "digest": "sha256:d1ff31d26dfc7cb14ca948c5e8f81e4299b57f03db262d4b1da9acec997593c3"
+    }
+  ]
+}

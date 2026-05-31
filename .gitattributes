@@ -1,0 +1,6 @@
+# Serve LF line endings so the agent-skills SKILL.md sha256 digest stays stable
+# (the integrity check is byte-sensitive) and content-negotiation .md is clean.
+*.md text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+/.well-known/api-catalog text eol=lf

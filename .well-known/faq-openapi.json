@@ -1,0 +1,52 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Business Internet Quotes FAQ API",
+    "version": "1.0.0",
+    "description": "Read-only FAQ about business internet, coverage lookups, and the quote process. No authentication; cached for 1 hour.",
+    "contact": {
+      "name": "Business Internet Quotes",
+      "email": "quotes@businessinternetsearch.sdfkjh.com",
+      "url": "https://businessinternetsearch.sdfkjh.com"
+    }
+  },
+  "servers": [{ "url": "https://businessinternetsearch.sdfkjh.com" }],
+  "paths": {
+    "/api/faq": {
+      "get": {
+        "summary": "List frequently asked questions and answers",
+        "operationId": "listFaq",
+        "responses": {
+          "200": {
+            "description": "The FAQ.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["count", "faq"],
+                  "properties": {
+                    "name": { "type": "string" },
+                    "description": { "type": "string" },
+                    "site": { "type": "string", "format": "uri" },
+                    "count": { "type": "integer" },
+                    "faq": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": ["q", "a"],
+                        "properties": {
+                          "q": { "type": "string", "description": "The question." },
+                          "a": { "type": "string", "description": "The answer." }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
