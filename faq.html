@@ -146,6 +146,8 @@
 </script>
 
 <style>
+  .skip-link{position:absolute;left:-9999px;top:0;background:var(--blue);color:#fff;padding:.6rem 1rem;z-index:2000;font-weight:700;text-decoration:none;border-radius:0 0 6px 0}
+  .skip-link:focus{left:0}
   *{box-sizing:border-box;margin:0;padding:0}
   :root{
     --blue:#1a4fa0;--blue-dark:#0f3070;--blue-light:#e8f0fc;
@@ -211,13 +213,14 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <nav>
   <a class="logo" href="/">Business Internet Quotes<br><span>Quick and Easy</span></a>
   <a class="nav-cta" href="/#quote-form">Get a Quote</a>
 </nav>
 
-<main>
+<main id="main">
 
 <section class="faq-header">
   <picture class="faq-header-img">
@@ -418,7 +421,7 @@
 </main>
 
 <footer>
-  <p>&copy; 2026 <span>Business Internet Quotes — Quick and Easy</span> &nbsp;|&nbsp; <a href="/faq">FAQ</a> &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/do-not-sell">Do Not Sell</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></p>
+  <p>&copy; 2026 <span>Business Internet Quotes — Quick and Easy</span> &nbsp;|&nbsp; <a href="/faq">FAQ</a> &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/do-not-sell">Do Not Sell</a> &nbsp;|&nbsp; <a href="/terms">Terms</a> &nbsp;|&nbsp; <a href="/accessibility">Accessibility</a></p>
 </footer>
 
 </body>

@@ -1,0 +1,19 @@
+# Business Internet Quotes
+
+> Business Internet Quotes (businessinternetsearch.sdfkjh.com) is a free service that finds business-grade internet service providers available at a specific commercial address. A business submits its legal name, service address, and contact details once; we check the business-grade ISPs serviceable at that exact address and return quotes — including monthly cost, install timeline, hardware fees, and contract length. The service is free to the business; carriers pay a referral commission when a business signs service. We are not a carrier or reseller and do not sell submitted information.
+
+## Pages
+
+- [Home](https://businessinternetsearch.sdfkjh.com/): how it works and the quote request form.
+- [FAQ](https://businessinternetsearch.sdfkjh.com/faq): common questions about business internet, coverage lookups, install timelines, and the quote process.
+- [Privacy](https://businessinternetsearch.sdfkjh.com/privacy): what is collected and how it is used.
+- [Do Not Sell or Share](https://businessinternetsearch.sdfkjh.com/do-not-sell): CCPA/CPRA stance.
+- [Terms](https://businessinternetsearch.sdfkjh.com/terms): terms and conditions.
+- [Accessibility](https://businessinternetsearch.sdfkjh.com/accessibility): accessibility statement.
+
+## Facts
+
+- Service area: United States (quotes are address-specific to a commercial location).
+- Cost to the business: free, no obligation.
+- Business-grade focus: symmetrical speeds, SLAs, static IPs, dedicated lines — not residential service.
+- Contact: quotes@businessinternetsearch.sdfkjh.com
