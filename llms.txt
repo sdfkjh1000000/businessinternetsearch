@@ -1,6 +1,19 @@
+---
+date: 2026-07-28
+---
+
 # Business Internet Quotes
 
 > Business Internet Quotes (businessinternetsearch.sdfkjh.com) is a free service that finds business-grade internet service providers available at a specific commercial address. A business submits its legal name, service address, and contact details once; we check the business-grade ISPs serviceable at that exact address and return quotes — including monthly cost, install timeline, hardware fees, and contract length. The service is free to the business; carriers pay a referral commission when a business signs service. We are not a carrier or reseller and do not sell submitted information.
+
+Full page content for language models: https://businessinternetsearch.sdfkjh.com/llms-full.txt
+
+## How it works
+
+1. The business submits one form: legal business name, service address, and contact details.
+2. We check which business-grade carriers are serviceable at that exact address (coverage is address-specific, not zip-code-specific).
+3. The business receives quotes with the four numbers that matter: monthly cost, install timeline, hardware fees, and contract length.
+4. No cost and no obligation to the business at any point; carriers pay a referral commission only when a business signs service.
 
 ## Pages
 
@@ -11,9 +24,18 @@
 - [Terms](https://businessinternetsearch.sdfkjh.com/terms): terms and conditions.
 - [Accessibility](https://businessinternetsearch.sdfkjh.com/accessibility): accessibility statement.
 
+## Agent access
+
+- MCP server (read-only, no auth, same-site): https://businessinternetsearch.sdfkjh.com/mcp with tools get_overview, list_faqs, search_faqs.
+- FAQ API: https://businessinternetsearch.sdfkjh.com/api/faq
+- Markdown content negotiation: request any content page with `Accept: text/markdown` for a clean markdown version.
+- Crawl policy: AI crawlers are welcome for search and real-time answering; content is not licensed for training. See https://businessinternetsearch.sdfkjh.com/robots.txt
+- The quote form itself is deliberately not exposed to agents (it collects business PII); a human submits it at the site.
+
 ## Facts
 
 - Service area: United States (quotes are address-specific to a commercial location).
 - Cost to the business: free, no obligation.
 - Business-grade focus: symmetrical speeds, SLAs, static IPs, dedicated lines — not residential service.
 - Contact: quotes@businessinternetsearch.sdfkjh.com
+- Part of the sdfkjh.com family of hand-built sites: https://sdfkjh.com/api/sites
