@@ -130,6 +130,14 @@ We're moving to a new office — how early should I order internet?
 
 Sooner than you think. Cable installs run 1–3 weeks, lit fiber 2–4 weeks, and a new fiber drop can take 60–120 days. Start checking carrier availability the day you sign the lease, not after.
 
+Our internet keeps going down. When is it time to switch providers?
+
+Log each outage with a date, time, and duration. That log turns "the internet is always down" into a service ticket your carrier has to act on. If outages continue after a line-quality ticket and a tech visit, it pays to see what else serves your address, because a different carrier often means a physically different path into your building. [When to switch →](/faq#keeps-going-down)
+
+We run the business from a home address. Can we still get business internet?
+
+Yes, in most areas. Major carriers will write a business account at a residential address, which gets you uptime commitments, static IPs, and business support at your home. A common fix for home-based businesses whose residential line keeps dropping. [Details →](/faq#home-address)
+
 What's the catch? Why is the quote service free?
 
 No catch. When a business chooses internet service through us, the carrier pays us a small ongoing referral commission — it doesn't add anything to your bill, and the price you see is the same price you'd get going direct.

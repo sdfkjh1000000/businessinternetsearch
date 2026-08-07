@@ -46,6 +46,12 @@ Residential is cheaper, but the differences matter for most businesses:
 
 A one-person operation with no critical apps is sometimes fine on residential. Past that, business plans tend to pay for themselves the first time something breaks.
 
+We run the business from a home address. Can we still get business internet?
+
+Yes, in most areas. Major carriers will write a business account at a residential address (Spectrum Business, Comcast Business, Cox Business, and others). You get the business-grade extras at your home: a service agreement with uptime commitments, static IPs if you need them, and support that does not route through the residential queue.
+
+This is a common fix for home-based businesses and remote workers whose residential line keeps dropping, since residential plans carry no uptime commitment at all. If your address is served, we can quote it like any other business location.
+
 Do I really need fiber, or is cable enough?
 
 Cable (DOCSIS) can deliver fast downloads — often 1 Gbps or more — but uploads are usually 35–50 Mbps, which throttles video calls, cloud backups, VoIP quality, and remote access. Fiber is symmetrical and generally more reliable.
@@ -101,6 +107,14 @@ Should I get a backup internet connection?
 If your business depends on internet — meaning a several-hour outage costs real money or stops work — yes. Common backup patterns: a second wired connection from a different carrier (best), fixed wireless (good), or cellular failover (acceptable for short outages).
 
 The cost of backup is almost always less than one bad outage at the wrong time.
+
+Our internet keeps going down. When is it time to switch providers?
+
+First, separate a bad stretch from a pattern: log each outage with a date, time, and duration. That log turns "the internet is always down" into a service ticket your carrier has to act on, and on business plans with an SLA it is the basis for bill credits.
+
+If outages continue after a line-quality ticket and a tech visit, the problem is usually infrastructure your carrier is not fixing, and no discount fixes that. That is the point where it pays to see what else serves your address, because a different carrier often means a physically different path into your building.
+
+Submit your address and we will show you every business-grade alternative available at your location, with install timelines, so you can decide with real options in hand.
 
 Process and timeline
 
